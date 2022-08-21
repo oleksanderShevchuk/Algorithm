@@ -15,7 +15,7 @@ namespace Algorithm
                 {
                     var a = Items[j];
                     var b = Items[j + 1];
-                    if (a.CompareTo(b) == 1)
+                    if (Compare(a, b) == 1)
                     {
                         Swop(j, j + 1);
                         ComparisonCount++;
@@ -30,7 +30,7 @@ namespace Algorithm
                 {
                     var a = Items[j-1];
                     var b = Items[j];
-                    if (a.CompareTo(b) == 1)
+                    if (Compare(a, b) == 1)
                     {
                         Swop(j - 1, j);
                         ComparisonCount++;

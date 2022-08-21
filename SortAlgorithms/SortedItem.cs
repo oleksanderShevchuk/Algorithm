@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace SortAlgorithms
@@ -7,7 +8,7 @@ namespace SortAlgorithms
     {
         public VerticalProgressBar.VerticalProgressBar ProgressBar { get; private set; }
         public Label Lable { get; private set; }
-        public int Value { get; set; }
+        public int Value { get; private set; }
         public SortedItem(int value, int number)
         {
             Value = value;
@@ -36,7 +37,16 @@ namespace SortAlgorithms
             Lable.TabIndex = 5;
             Lable.Text = Value.ToString();
         }
-
+        public void SetValue(int value)
+        {
+            Value = value;
+            ProgressBar.Value = value;
+            Lable.Text = value.ToString();
+        }
+        public void SetColor(Color color)
+        {
+            ProgressBar.Color = color;
+        }
         public int CompareTo(object obj)
         {
             if (obj is SortedItem item)
