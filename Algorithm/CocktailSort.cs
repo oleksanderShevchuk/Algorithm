@@ -18,7 +18,6 @@ namespace Algorithm
                     if (Compare(a, b) == 1)
                     {
                         Swop(j, j + 1);
-                        ComparisonCount++;
                     }
                 }
                 right--;
@@ -33,7 +32,6 @@ namespace Algorithm
                     if (Compare(a, b) == 1)
                     {
                         Swop(j - 1, j);
-                        ComparisonCount++;
                     }
                 }
                 left++;
