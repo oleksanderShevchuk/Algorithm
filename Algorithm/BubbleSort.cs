@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace Algorithm
@@ -19,9 +18,7 @@ namespace Algorithm
                     var b = Items[j+1];
                     if (Compare(a,b) == 1)
                     {
-                        
                         Swop(j, j+1);
-                        ComparisonCount++;
                     }
                 }
             }

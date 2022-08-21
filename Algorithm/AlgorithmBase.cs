@@ -18,12 +18,12 @@ namespace Algorithm
         public AlgorithmBase() { }
         protected void Swop(int positionA, int positionB)
         {
+            SwopEvent?.Invoke(this, new Tuple<T, T>(Items[positionA], Items[positionB]));
+            SwopCount++;
+
             var temp = Items[positionA];
             Items[positionA] = Items[positionB];
             Items[positionB] = temp;
-
-            SwopCount++;
-            CompareEvent?.Invoke(this, new Tuple<T, T>(Items[positionA], Items[positionB]));
         }
         public TimeSpan Sort()
         {
