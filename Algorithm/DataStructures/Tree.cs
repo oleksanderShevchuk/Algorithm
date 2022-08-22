@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Algorithm.DataStructures
 {
-    public class Tree<T>
-        where T : IComparable
+    public class Tree<T> where T : IComparable
     {
         public Node<T> Root { get; private set; }
         public int Count { get; private set; }
