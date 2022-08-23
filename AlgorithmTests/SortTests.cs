@@ -1,4 +1,5 @@
 ﻿using Algorithm;
+using Algorithm.DataStructures;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -126,8 +127,7 @@ namespace AlgorithmTests
         public void HeapSortTest()
         {
             // arrange
-            var heap = new HeapSort<int>();
-            heap.Items.AddRange(Items);
+            var heap = new Heap<int>(Items);
 
             // act 
             heap.Sort();
