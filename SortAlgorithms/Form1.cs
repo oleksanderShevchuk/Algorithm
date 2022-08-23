@@ -84,7 +84,7 @@ namespace SortAlgorithms
             e.Item2.SetColor(Color.Green);
             panel3.Refresh();
 
-            Thread.Sleep(50);
+            Thread.Sleep(110);
 
             e.Item1.SetColor(Color.Blue);
             e.Item2.SetColor(Color.Blue);
@@ -136,6 +136,12 @@ namespace SortAlgorithms
         {
             var bases = new AlgorithmBase<SortedItem>(items);
             BtnClick(bases);
+        }
+
+        private void SelectionSortBtn_Click(object sender, EventArgs e)
+        {
+            var selection = new SelectionSort<SortedItem>(items);
+            BtnClick(selection);
         }
     }
 }

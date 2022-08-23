@@ -47,6 +47,7 @@
             this.TreeSortBtn = new System.Windows.Forms.Button();
             this.BaseSortBtn = new System.Windows.Forms.Button();
             this.HeapSortBtn = new System.Windows.Forms.Button();
+            this.SelectionSortBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -228,11 +229,22 @@
             this.HeapSortBtn.UseVisualStyleBackColor = true;
             this.HeapSortBtn.Click += new System.EventHandler(this.HeapSortBtn_Click);
             // 
+            // SelectionSortBtn
+            // 
+            this.SelectionSortBtn.Location = new System.Drawing.Point(412, 149);
+            this.SelectionSortBtn.Name = "SelectionSortBtn";
+            this.SelectionSortBtn.Size = new System.Drawing.Size(102, 23);
+            this.SelectionSortBtn.TabIndex = 13;
+            this.SelectionSortBtn.Text = "SelectionSort";
+            this.SelectionSortBtn.UseVisualStyleBackColor = true;
+            this.SelectionSortBtn.Click += new System.EventHandler(this.SelectionSortBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(995, 449);
+            this.Controls.Add(this.SelectionSortBtn);
             this.Controls.Add(this.HeapSortBtn);
             this.Controls.Add(this.BaseSortBtn);
             this.Controls.Add(this.TreeSortBtn);
@@ -247,7 +259,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Algorithms";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -278,6 +290,7 @@
         private System.Windows.Forms.Button TreeSortBtn;
         private System.Windows.Forms.Button BaseSortBtn;
         private System.Windows.Forms.Button HeapSortBtn;
+        private System.Windows.Forms.Button SelectionSortBtn;
     }
 }
 
