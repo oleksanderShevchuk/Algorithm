@@ -163,5 +163,11 @@ namespace SortAlgorithms
             var selection = new SelectionSort<SortedItem>(items);
             BtnClick(selection);
         }
+
+        private void GnomeSortBtn_Click(object sender, EventArgs e)
+        {
+            var gnome = new GnomeSort<SortedItem>(items);
+            BtnClick(gnome);
+        }
     }
 }
