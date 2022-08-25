@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace Algorithm
 {
-    public class RedixSort<T> : AlgorithmBase<T> where T : IComparable
+    public class LsdRedixSort<T> : AlgorithmBase<T> where T : IComparable
     {
-        public RedixSort(IEnumerable<T> items) : base(items) { }
-        public RedixSort() { }
+        public LsdRedixSort(IEnumerable<T> items) : base(items) { }
+        public LsdRedixSort() { }
         protected override void MakeSort()
         {
             var groups = new List<List<T>>();
