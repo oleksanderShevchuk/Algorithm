@@ -10,7 +10,7 @@ namespace Algorithm
     {
         public SelectionSort(IEnumerable<T> items) : base(items) { }
         public SelectionSort() { }
-        public override void MakeSort()
+        protected override void MakeSort()
         {
             var minIndex = 0;
             for (int i = 0; i < Items.Count - 1; i++)

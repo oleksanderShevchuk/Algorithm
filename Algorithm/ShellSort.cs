@@ -7,7 +7,7 @@ namespace Algorithm
     {
         public ShellSort(IEnumerable<T> items) : base(items) { }
         public ShellSort() { }
-        public override void MakeSort()
+        protected override void MakeSort()
         {
             var step = Items.Count / 2;
             while (step > 0)

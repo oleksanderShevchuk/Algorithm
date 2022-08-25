@@ -142,7 +142,7 @@ namespace SortAlgorithms
 
         private void TreeSortBtn_Click(object sender, EventArgs e)
         {
-            var tree = new TreeSort<SortedItem>(items);
+            var tree = new Tree<SortedItem>(items);
             BtnClick(tree);
         }
 

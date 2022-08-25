@@ -6,92 +6,74 @@ using System.Threading.Tasks;
 
 namespace Algorithm.DataStructures
 {
-    public class Tree<T> where T : IComparable
+    public class Tree<T> : AlgorithmBase<T> where T : IComparable
     {
-        public Node<T> Root { get; private set; }
+        private Node<T> Root { get; set; }
         public int Count { get; private set; }
         public Tree() { }
         public Tree(IEnumerable<T> items)
         {
-            foreach (var item in items)
+            var list = items.ToList();
+            for (int i = 0; i < list.Count; i++)
             {
-                Add(item);
+                var item = list[i]; 
+                Items.Add(item);
+
+                var node = new Node<T>(item, i);
+                Add(node);
             }
         }
-        public void Add(T data)
+        private void Add(Node<T> node)
         {
             if (Root == null)
             {
-                Root = new Node<T>(data);
+                Root = node;
                 Count = 1;
                 return;
             }
-            Root.Add(data);
+            Add(Root, node);
             Count++;
         }
-        public List<T> Preorder()
+        private void Add(Node<T> node, Node<T> newNode)
         {
-            if (Root == null)
+            if (Compare(node.Data, newNode.Data) == 1)
             {
-                return new List<T>();
+                if (node.Left == null)
+                {
+                    node.Left = newNode;
+                }
+                else
+                {
+                    Add(node.Left, newNode);
+                }
             }
-            return Preorder(Root);
+            else
+            {
+                if (node.Right == null)
+                {
+                    node.Right = newNode;
+                }
+                else
+                {
+                    Add(newNode.Right, newNode);
+                }
+            }
         }
-        private List<T> Preorder(Node<T> node)
+        protected override void MakeSort()
         {
-            var list = new List<T>();
+            var result = Inorder(Root);
 
-            if (node != null)
-            {
-                list.Add(node.Data);
-                if (node.Left != null)
-                {
-                    list.AddRange(Preorder(node.Left));
-                }
-                if (node.Right != null)
-                {
-                    list.AddRange(Preorder(node.Right));
-                }
-            }
-            return list;
-        }
-        public List<T> Postorder()
-        {
-            if (Root == null)
-            {
-                return new List<T>();
-            }
-            return Postorder(Root);
-        }
-        private List<T> Postorder(Node<T> node)
-        {
-            var list = new List<T>();
+            Items.AddRange(result.Select(i => i.Data));
 
-            if (node != null)
+            for (int i = 0; i < result.Count; i++)
             {
-                if (node.Left != null)
-                {
-                    list.AddRange(Postorder(node.Left));
-                }
-                if (node.Right != null)
-                {
-                    list.AddRange(Postorder(node.Right));
-                }
-                list.Add(node.Data);
+                Swop(i, result.Count + i);
             }
-            return list;
+            Items.RemoveRange(result.Count, result.Count);
         }
-        public List<T> Inorder()
+        private List<Node<T>> Inorder(Node<T> node)
         {
-            if (Root == null)
-            {
-                return new List<T>();
-            }
-            return Inorder(Root);
-        }
-        private List<T> Inorder(Node<T> node)
-        {
-            var list = new List<T>();
+            var list = new List<Node<T>>();
 
             if (node != null)
             {
@@ -99,7 +81,7 @@ namespace Algorithm.DataStructures
                 {
                     list.AddRange(Inorder(node.Left));
                 }
-                list.Add(node.Data);
+                list.Add(node);
                 if (node.Right != null)
                 {
                     list.AddRange(Inorder(node.Right));
@@ -107,5 +89,6 @@ namespace Algorithm.DataStructures
             }
             return list;
         }
+        
     }
 }

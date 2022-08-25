@@ -36,7 +36,7 @@ namespace Algorithm
 
             return timer.Elapsed;
         }
-        public virtual void MakeSort()
+        protected virtual void MakeSort()
         {
             Items.Sort();
         }

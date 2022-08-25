@@ -7,7 +7,7 @@ namespace Algorithm
     {
         public InsertSort(IEnumerable<T> items) : base(items) { }
         public InsertSort() { }
-        public override void MakeSort()
+        protected override void MakeSort()
         {
             for (int i = 1; i < Items.Count; i++)
             {

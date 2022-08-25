@@ -7,7 +7,7 @@ namespace Algorithm
     {
         public CocktailSort(IEnumerable<T> items) : base(items) { }
         public CocktailSort() { }
-        public override void MakeSort()
+        protected override void MakeSort()
         {
             var left = 0;
             var right = Items.Count - 1;

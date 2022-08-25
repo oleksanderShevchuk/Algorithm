@@ -10,12 +10,12 @@ namespace Algorithm
     {
         public GnomeSort(IEnumerable<T> items) : base(items) { }
         public GnomeSort() { }
-        public override void MakeSort()
+        protected override void MakeSort()
         {
             int i = 1;
             while (i < Items.Count)
             {
-                if (i == 0 || Compare(Items[i], Items[i-1]) == 1 || Compare(Items[i], Items[i - 1]) == 0)
+                if (i == 0 || Compare(Items[i], Items[i-1]) != -1)
                 {
                     i++;
                 }

@@ -7,7 +7,7 @@ namespace Algorithm
     {
         public BubbleSort(IEnumerable<T> items) : base(items) { }
         public BubbleSort() { }
-        public override void MakeSort()
+        protected override void MakeSort()
         {
             var count = Items.Count;
             for(int i = 0; i < count; i++)

@@ -73,7 +73,7 @@ namespace Algorithm.DataStructures
         {
             return (currentIndex - 1) / 2;
         }
-        public override void MakeSort()
+        protected override void MakeSort()
         {
             for (int i = Count - 1; i >= 0; i--)
             {
