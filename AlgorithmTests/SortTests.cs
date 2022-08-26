@@ -18,7 +18,7 @@ namespace AlgorithmTests
         public void Init()
         {
             Items.Clear();
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 10; i++)
             {
                 Items.Add(rnd.Next(0, 1000));
             }
@@ -199,6 +199,22 @@ namespace AlgorithmTests
             for (int i = 0; i < Items.Count; i++)
             {
                 Assert.AreEqual(Sorted[i], msdRedix.Items[i]);
+            }
+        }
+        [TestMethod()]
+        public void MergeSortTest()
+        {
+            // arrange
+            var merge = new MergeSort<int>();
+            merge.Items.AddRange(Items);
+
+            // act 
+            merge.Sort();
+
+            //assert
+            for (int i = 0; i < Items.Count; i++)
+            {
+                Assert.AreEqual(Sorted[i], merge.Items[i]);
             }
         }
     }

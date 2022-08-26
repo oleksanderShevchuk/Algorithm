@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Algorithm.DataStructures
 {
-    public class Node<T>
+    class Node<T>
         where T : IComparable
     {
         public T Data { get; private set; }
@@ -17,12 +17,6 @@ namespace Algorithm.DataStructures
         {
             Data = data;
             Index = index;
-        }
-        public Node(T data, Node<T> left, Node<T> right)
-        {
-            Data = data;
-            Left = left;
-            Right = right;
         }
         public override string ToString()
         {
