@@ -10,8 +10,12 @@ namespace Algorithm
         protected override void MakeSort()
         {
             int length = GetMaxLength();
-            var resut = SortCollection(Items, length - 1);
-            Items = resut;
+            var result = SortCollection(Items, length - 1);
+            for (int i = 0; i < result.Count; i++)
+            {
+                Set(i, result[i]);
+            }
+            Items = result;
         }
         private List<T> SortCollection(List<T> collection, int step)
         {

@@ -169,12 +169,6 @@ namespace SortAlgorithms
             BtnClick(heap);
         }
 
-        private void BaseSortBtn_Click(object sender, EventArgs e)
-        {
-            var bases = new AlgorithmBase<SortedItem>(items);
-            BtnClick(bases);
-        }
-
         private void SelectionSortBtn_Click(object sender, EventArgs e)
         {
             var selection = new SelectionSort<SortedItem>(items);
@@ -185,6 +179,17 @@ namespace SortAlgorithms
         {
             var gnome = new GnomeSort<SortedItem>(items);
             BtnClick(gnome);
+        }
+        private void LsdRedixSortBtn_Click(object sender, EventArgs e)
+        {
+            var lsdRedix = new LsdRedixSort<SortedItem>(items);
+            BtnClick(lsdRedix);
+        }
+
+        private void MsdRedixSortBtn_Click(object sender, EventArgs e)
+        {
+            var msdRedix = new MsdRedixSort<SortedItem>(items);
+            BtnClick(msdRedix);
         }
     }
 }

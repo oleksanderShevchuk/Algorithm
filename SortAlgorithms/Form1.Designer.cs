@@ -45,10 +45,11 @@
             this.InsertSortBtn = new System.Windows.Forms.Button();
             this.ShellSortBtn = new System.Windows.Forms.Button();
             this.TreeSortBtn = new System.Windows.Forms.Button();
-            this.BaseSortBtn = new System.Windows.Forms.Button();
+            this.LsdRedixSortBtn = new System.Windows.Forms.Button();
             this.HeapSortBtn = new System.Windows.Forms.Button();
             this.SelectionSortBtn = new System.Windows.Forms.Button();
             this.GnomeSortBtn = new System.Windows.Forms.Button();
+            this.MsdRedixSortBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -130,7 +131,7 @@
             this.panel3.AutoSize = true;
             this.panel3.Location = new System.Drawing.Point(448, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(546, 143);
+            this.panel3.Size = new System.Drawing.Size(571, 143);
             this.panel3.TabIndex = 2;
             // 
             // BubbleSortBtn
@@ -172,7 +173,7 @@
             // 
             // CocktailSortBtn
             // 
-            this.CocktailSortBtn.Location = new System.Drawing.Point(112, 149);
+            this.CocktailSortBtn.Location = new System.Drawing.Point(110, 149);
             this.CocktailSortBtn.Name = "CocktailSortBtn";
             this.CocktailSortBtn.Size = new System.Drawing.Size(94, 23);
             this.CocktailSortBtn.TabIndex = 7;
@@ -182,7 +183,7 @@
             // 
             // InsertSortBtn
             // 
-            this.InsertSortBtn.Location = new System.Drawing.Point(212, 149);
+            this.InsertSortBtn.Location = new System.Drawing.Point(208, 149);
             this.InsertSortBtn.Name = "InsertSortBtn";
             this.InsertSortBtn.Size = new System.Drawing.Size(94, 23);
             this.InsertSortBtn.TabIndex = 8;
@@ -192,7 +193,7 @@
             // 
             // ShellSortBtn
             // 
-            this.ShellSortBtn.Location = new System.Drawing.Point(312, 149);
+            this.ShellSortBtn.Location = new System.Drawing.Point(306, 149);
             this.ShellSortBtn.Name = "ShellSortBtn";
             this.ShellSortBtn.Size = new System.Drawing.Size(94, 23);
             this.ShellSortBtn.TabIndex = 9;
@@ -202,7 +203,7 @@
             // 
             // TreeSortBtn
             // 
-            this.TreeSortBtn.Location = new System.Drawing.Point(115, 414);
+            this.TreeSortBtn.Location = new System.Drawing.Point(710, 149);
             this.TreeSortBtn.Name = "TreeSortBtn";
             this.TreeSortBtn.Size = new System.Drawing.Size(94, 23);
             this.TreeSortBtn.TabIndex = 10;
@@ -210,19 +211,19 @@
             this.TreeSortBtn.UseVisualStyleBackColor = true;
             this.TreeSortBtn.Click += new System.EventHandler(this.TreeSortBtn_Click);
             // 
-            // BaseSortBtn
+            // LsdRedixSortBtn
             // 
-            this.BaseSortBtn.Location = new System.Drawing.Point(15, 414);
-            this.BaseSortBtn.Name = "BaseSortBtn";
-            this.BaseSortBtn.Size = new System.Drawing.Size(94, 23);
-            this.BaseSortBtn.TabIndex = 11;
-            this.BaseSortBtn.Text = "BaseSort";
-            this.BaseSortBtn.UseVisualStyleBackColor = true;
-            this.BaseSortBtn.Click += new System.EventHandler(this.BaseSortBtn_Click);
+            this.LsdRedixSortBtn.Location = new System.Drawing.Point(807, 149);
+            this.LsdRedixSortBtn.Name = "LsdRedixSortBtn";
+            this.LsdRedixSortBtn.Size = new System.Drawing.Size(103, 23);
+            this.LsdRedixSortBtn.TabIndex = 11;
+            this.LsdRedixSortBtn.Text = "LsdRedixSort";
+            this.LsdRedixSortBtn.UseVisualStyleBackColor = true;
+            this.LsdRedixSortBtn.Click += new System.EventHandler(this.LsdRedixSortBtn_Click);
             // 
             // HeapSortBtn
             // 
-            this.HeapSortBtn.Location = new System.Drawing.Point(520, 149);
+            this.HeapSortBtn.Location = new System.Drawing.Point(510, 149);
             this.HeapSortBtn.Name = "HeapSortBtn";
             this.HeapSortBtn.Size = new System.Drawing.Size(94, 23);
             this.HeapSortBtn.TabIndex = 12;
@@ -232,7 +233,7 @@
             // 
             // SelectionSortBtn
             // 
-            this.SelectionSortBtn.Location = new System.Drawing.Point(412, 149);
+            this.SelectionSortBtn.Location = new System.Drawing.Point(404, 149);
             this.SelectionSortBtn.Name = "SelectionSortBtn";
             this.SelectionSortBtn.Size = new System.Drawing.Size(102, 23);
             this.SelectionSortBtn.TabIndex = 13;
@@ -242,7 +243,7 @@
             // 
             // GnomeSortBtn
             // 
-            this.GnomeSortBtn.Location = new System.Drawing.Point(620, 149);
+            this.GnomeSortBtn.Location = new System.Drawing.Point(610, 149);
             this.GnomeSortBtn.Name = "GnomeSortBtn";
             this.GnomeSortBtn.Size = new System.Drawing.Size(94, 23);
             this.GnomeSortBtn.TabIndex = 14;
@@ -250,15 +251,26 @@
             this.GnomeSortBtn.UseVisualStyleBackColor = true;
             this.GnomeSortBtn.Click += new System.EventHandler(this.GnomeSortBtn_Click);
             // 
+            // MsdRedixSortBtn
+            // 
+            this.MsdRedixSortBtn.Location = new System.Drawing.Point(916, 149);
+            this.MsdRedixSortBtn.Name = "MsdRedixSortBtn";
+            this.MsdRedixSortBtn.Size = new System.Drawing.Size(103, 23);
+            this.MsdRedixSortBtn.TabIndex = 15;
+            this.MsdRedixSortBtn.Text = "MsdRedixSort";
+            this.MsdRedixSortBtn.UseVisualStyleBackColor = true;
+            this.MsdRedixSortBtn.Click += new System.EventHandler(this.MsdRedixSortBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(995, 449);
+            this.ClientSize = new System.Drawing.Size(1031, 449);
+            this.Controls.Add(this.MsdRedixSortBtn);
             this.Controls.Add(this.GnomeSortBtn);
             this.Controls.Add(this.SelectionSortBtn);
             this.Controls.Add(this.HeapSortBtn);
-            this.Controls.Add(this.BaseSortBtn);
+            this.Controls.Add(this.LsdRedixSortBtn);
             this.Controls.Add(this.TreeSortBtn);
             this.Controls.Add(this.ShellSortBtn);
             this.Controls.Add(this.InsertSortBtn);
@@ -300,10 +312,11 @@
         private System.Windows.Forms.Button InsertSortBtn;
         private System.Windows.Forms.Button ShellSortBtn;
         private System.Windows.Forms.Button TreeSortBtn;
-        private System.Windows.Forms.Button BaseSortBtn;
+        private System.Windows.Forms.Button LsdRedixSortBtn;
         private System.Windows.Forms.Button HeapSortBtn;
         private System.Windows.Forms.Button SelectionSortBtn;
         private System.Windows.Forms.Button GnomeSortBtn;
+        private System.Windows.Forms.Button MsdRedixSortBtn;
     }
 }
 
