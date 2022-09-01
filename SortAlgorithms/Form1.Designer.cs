@@ -51,6 +51,7 @@
             this.GnomeSortBtn = new System.Windows.Forms.Button();
             this.MsdRedixSortBtn = new System.Windows.Forms.Button();
             this.MergeSortBtn = new System.Windows.Forms.Button();
+            this.QuickSortBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -274,11 +275,22 @@
             this.MergeSortBtn.UseVisualStyleBackColor = true;
             this.MergeSortBtn.Click += new System.EventHandler(this.MergeSortBtn_Click);
             // 
+            // QuickSortBtn
+            // 
+            this.QuickSortBtn.Location = new System.Drawing.Point(1134, 149);
+            this.QuickSortBtn.Name = "QuickSortBtn";
+            this.QuickSortBtn.Size = new System.Drawing.Size(103, 31);
+            this.QuickSortBtn.TabIndex = 17;
+            this.QuickSortBtn.Text = "QuickSort";
+            this.QuickSortBtn.UseVisualStyleBackColor = true;
+            this.QuickSortBtn.Click += new System.EventHandler(this.QuickSortBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1288, 449);
+            this.Controls.Add(this.QuickSortBtn);
             this.Controls.Add(this.MergeSortBtn);
             this.Controls.Add(this.MsdRedixSortBtn);
             this.Controls.Add(this.GnomeSortBtn);
@@ -332,6 +344,7 @@
         private System.Windows.Forms.Button GnomeSortBtn;
         private System.Windows.Forms.Button MsdRedixSortBtn;
         private System.Windows.Forms.Button MergeSortBtn;
+        private System.Windows.Forms.Button QuickSortBtn;
     }
 }
 
